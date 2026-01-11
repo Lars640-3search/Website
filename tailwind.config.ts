@@ -47,22 +47,21 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        gold: {
-          DEFAULT: "hsl(var(--gold))",
-          light: "hsl(var(--gold-light))",
-          dark: "hsl(var(--gold-dark))",
+        brand: {
+          blue: "hsl(var(--brand-blue))",
+          "blue-light": "hsl(var(--brand-blue-light))",
+          "blue-dark": "hsl(var(--brand-blue-dark))",
         },
-        charcoal: {
-          DEFAULT: "hsl(var(--charcoal))",
-          light: "hsl(var(--charcoal-light))",
+        dark: {
+          bg: "hsl(var(--dark-bg))",
+          card: "hsl(var(--dark-card))",
         },
-        cream: {
-          DEFAULT: "hsl(var(--cream))",
-          muted: "hsl(var(--cream-muted))",
+        gray: {
+          light: "hsl(var(--gray-light))",
+          muted: "hsl(var(--gray-muted))",
         },
       },
       fontFamily: {
-        display: ["Playfair Display", "serif"],
         body: ["Inter", "sans-serif"],
       },
       borderRadius: {
@@ -95,10 +94,6 @@ export default {
           from: { opacity: "0", transform: "scale(0.95)" },
           to: { opacity: "1", transform: "scale(1)" },
         },
-        shimmer: {
-          "0%": { backgroundPosition: "-200% 0" },
-          "100%": { backgroundPosition: "200% 0" },
-        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -107,7 +102,6 @@ export default {
         "fade-in-slow": "fade-in-slow 1.2s ease-out forwards",
         "slide-up": "slide-up 0.8s ease-out forwards",
         "scale-in": "scale-in 0.6s ease-out forwards",
-        shimmer: "shimmer 2s infinite linear",
       },
     },
   },
