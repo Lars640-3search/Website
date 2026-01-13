@@ -1,3 +1,5 @@
+import { ThemeProvider } from "@/contexts/ThemeContext";
+import ThemeSwitcher from "@/components/ThemeSwitcher";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Thesis from "@/components/Thesis";
@@ -8,15 +10,18 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      <Hero />
-      <Thesis />
-      <Portfolio />
-      <Team />
-      <Contact />
-      <Footer />
-    </div>
+    <ThemeProvider>
+      <div className="min-h-screen">
+        <ThemeSwitcher />
+        <Header />
+        <Hero />
+        <Thesis />
+        <Portfolio />
+        <Team />
+        <Contact />
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 };
 
