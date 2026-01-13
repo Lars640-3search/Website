@@ -103,9 +103,6 @@
   body {
     @apply bg-background text-foreground antialiased;
     font-family: var(--font-body);
-    /* Default to dark theme for this VC site */
-    background: hsl(var(--dark-bg));
-    color: hsl(var(--pure-white));
   }
 }
 

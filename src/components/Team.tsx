@@ -1,3 +1,5 @@
+import { useTheme } from "@/contexts/ThemeContext";
+
 const teamMembers = [
   {
     name: "Alexandra Chen",
@@ -17,18 +19,27 @@ const teamMembers = [
 ];
 
 const Team = () => {
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
+
   return (
-    <section id="team" className="py-32 bg-dark-card relative">
+    <section id="team" className={`py-32 relative transition-colors duration-500 ${
+      isDark ? 'bg-[hsl(220,18%,10%)]' : 'bg-gray-50'
+    }`}>
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
           <p className="text-primary font-body text-sm tracking-[0.3em] uppercase mb-4">
             Our Team
           </p>
-          <h2 className="font-body text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white mb-6">
+          <h2 className={`font-body text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 ${
+            isDark ? 'text-white' : 'text-gray-900'
+          }`}>
             Experienced <span className="text-gradient-blue">Operators & Investors</span>
           </h2>
-          <p className="font-body text-lg text-gray-muted leading-relaxed">
+          <p className={`font-body text-lg leading-relaxed ${
+            isDark ? 'text-gray-muted' : 'text-gray-600'
+          }`}>
             Our partners bring decades of operating experience and investment 
             expertise to support founders at every stage of growth.
           </p>
@@ -42,7 +53,11 @@ const Team = () => {
               className="group text-center"
             >
               {/* Avatar Placeholder */}
-              <div className="w-40 h-40 mx-auto mb-6 rounded-full bg-gradient-to-br from-white/5 to-white/10 overflow-hidden border-2 border-white/10 group-hover:border-primary/50 transition-all duration-500">
+              <div className={`w-40 h-40 mx-auto mb-6 rounded-full bg-gradient-to-br overflow-hidden border-2 group-hover:border-primary/50 transition-all duration-500 ${
+                isDark 
+                  ? 'from-white/5 to-white/10 border-white/10' 
+                  : 'from-primary/5 to-primary/10 border-primary/20'
+              }`}>
                 <div className="w-full h-full flex items-center justify-center">
                   <span className="font-body text-5xl text-primary/50 font-bold">
                     {member.name.split(' ').map(n => n[0]).join('')}
@@ -50,13 +65,17 @@ const Team = () => {
                 </div>
               </div>
               
-              <h3 className="font-body text-2xl font-semibold text-white mb-1 group-hover:text-primary transition-colors duration-300">
+              <h3 className={`font-body text-2xl font-semibold mb-1 group-hover:text-primary transition-colors duration-300 ${
+                isDark ? 'text-white' : 'text-gray-900'
+              }`}>
                 {member.name}
               </h3>
               <p className="font-body text-primary text-sm font-medium mb-3">
                 {member.role}
               </p>
-              <p className="font-body text-gray-muted text-sm max-w-xs mx-auto">
+              <p className={`font-body text-sm max-w-xs mx-auto ${
+                isDark ? 'text-gray-muted' : 'text-gray-600'
+              }`}>
                 {member.bio}
               </p>
             </div>
