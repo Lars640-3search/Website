@@ -8,7 +8,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className={`py-32 relative overflow-hidden transition-colors duration-500 ${
-      isDark ? 'bg-[hsl(220,18%,10%)]' : 'bg-gray-50'
+      isDark ? 'bg-[hsl(220,20%,6%)]' : 'bg-white'
     }`}>
       {/* Background accent */}
       <div className={`absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent`} />
