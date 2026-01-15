@@ -22,7 +22,7 @@ const Header = () => {
         </a>
         
         <nav className="hidden md:flex items-center gap-8">
-          {['Thesis', 'Portfolio', 'Team', 'Contact'].map((item) => (
+          {['Home', 'Portfolio', 'Team', 'Contact', 'Invest'].map((item) => (
             <a 
               key={item}
               href={`#${item.toLowerCase()}`} 
@@ -33,6 +33,14 @@ const Header = () => {
               {item}
             </a>
           ))}
+          <a 
+            href="/dashboard"
+            className={`hover:text-primary transition-colors duration-300 font-body text-sm tracking-wide ${
+              isDark ? 'text-white/70' : 'text-black/70'
+            }`}
+          >
+            Dashboard
+          </a>
         </nav>
 
         <Button 
