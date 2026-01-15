@@ -6,6 +6,7 @@ import Thesis from "@/components/Thesis";
 import Portfolio from "@/components/Portfolio";
 import Team from "@/components/Team";
 import Contact from "@/components/Contact";
+import Invest from "@/components/Invest";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -19,6 +20,7 @@ const Index = () => {
         <Portfolio />
         <Team />
         <Contact />
+        <Invest />
         <Footer />
       </div>
     </ThemeProvider>

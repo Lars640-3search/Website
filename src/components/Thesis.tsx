@@ -29,7 +29,7 @@ const Thesis = () => {
   const isDark = theme === 'dark';
 
   return (
-    <section id="thesis" className={`py-32 relative transition-colors duration-500 ${
+    <section id="home" className={`py-32 relative transition-colors duration-500 ${
       isDark ? 'bg-[hsl(220,18%,10%)]' : 'bg-gray-50'
     }`}>
       <div className="container mx-auto px-6">
